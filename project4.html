@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooter Game</title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" crossorigin src="./assets/project4-WZGG2wtt.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/main-yGiB8jmv.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-BAB_jT3I.css">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <h1 class="logo"><a href="./index.html" style="color: inherit; text-decoration: none;">Portfolio</a></h1>
+        
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#projects">Projects</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="app" class="container">
+      <h2 class="section-title">Shooter Game</h2>
+      
+      <div class="about-section" style="margin-bottom: 20px;">
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>TypeScript</li>
+          <li>Canvas API</li>
+        </ul>
+      </div>
+      
+      <div style="display: flex; justify-content: center;">
+        <canvas id="gameCanvas" width="400" height="600" style="background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"></canvas>
+      </div>
+      
+      <p style="text-align: center; margin-top: 15px; color: #888;">
+        矢印キー: 移動 / スペースキー: ショット / [1][2][3]: 難易度選択
+      </p>
+      
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="./index.html" class="btn">← ポートフォリオに戻る</a>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

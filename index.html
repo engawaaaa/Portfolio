@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" crossorigin src="./assets/main-yGiB8jmv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-BAB_jT3I.css">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <h1 class="logo"><a href="./index.html" style="color: inherit; text-decoration: none;">Portfolio</a></h1>
+        
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#projects">Projects</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="container">
+        <h2>こんにちは、こちらは加藤双葉のポートフォリオです。</h2>
+        <a href="#projects" class="btn">作品を見る</a>
+      </section>
+
+      <section id="about" class="container section-bg">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p><strong>名前：</strong>加藤双葉</p>
+            <p>あたらしい技術を学ぶのが好きで、現在はフロントエンド開発に興味があります。趣味は音楽を聴くことです。</p>
+            <h3>Skills</h3>
+            <ul class="skills-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>Processing</li>
+              <li>Matlab</li>
+              <li>C++</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <a href="https://www.figma.com/proto/0fFWKzTILicLMxIwj42aZ7/%E7%84%A1%E9%A1%8C?node-id=1-2&starting-point-node-id=1%3A2">
+            <div class="project-card">
+            <div class="project-image">
+              <img src="./image/menu.png" alt="セルフオーダーのUIデザイン">
+            </div>
+            <h3>セルフオーダーのUIデザイン</h3>
+            <ul class="skills-list">
+              <li>figma</li>
+            </ul>
+            <p>セルフオーダーシステムのUIデザインとその画面遷移を設計しました。</p>
+          </div>
+          </a>
+          <a href="./project2.html" class="project-card">
+            <div class="project-image">
+              <img src="./image/kakeibo.png" alt="家計簿アプリのUIデザイン">
+            </div>
+            <h3>家計簿アプリ</h3>
+            <ul class="skills-list">
+              <li>Java</li>
+            </ul>
+            <p>Javaを使ったシンプルな家計簿アプリです。</p>
+          </a>
+          <a href="./project3.html" class="project-card">
+            <div class="project-image">
+              <img src="./image/API.png" alt="APIを活用したプロジェクト">
+            </div>
+            <h3>APIを活用したプロジェクト</h3>
+            <ul class="skills-list">
+              <li>Java</li>
+              <li>API</li>
+            </ul>
+            <p>SpotifyとGoogle、iTunesのAPIを活用したオリジナルのフェスセトリ予想アプリです。</p>
+          </a>
+          <a href="./project4.html" class="project-card">
+            <div class="project-image">
+              <img src="./image/shooting.png" alt="viteを用いたブラウザゲーム">
+            </div>
+            <h3>ブラウザゲーム</h3>
+            <ul class="skills-list">
+              <li>Vite</li>
+              <li>TypeScript</li>
+            </ul>
+            <p>Viteを活用して構築したブラウザゲームです。</p>
+          </a>
+          <a href="./index.html" class="project-card">
+            <div class="project-image">
+              <img src="./image/portfolio.png" alt="ポートフォリオサイト">
+            </div>
+            <h3>ポートフォリオサイト</h3>
+            <ul class="skills-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <p>ポートフォリオサイトを掲載した当サイトです。</p>
+          </a>
+          <a href="./project5.html" class="project-card">
+            <div class="project-image">
+              <img src="./image/chess.png" alt="Blender作品集">
+            </div>
+            <h3>Blender作品集</h3>
+            <ul class="skills-list">
+              <li>Blender</li>
+            </ul>
+            <p>Blenderを用いて制作した3Dモデルの作品集です。</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="container section-bg">
+        <h2 class="section-title">Contact</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+          ご質問やお仕事の依頼がありましたら、以下のフォームよりお気軽にご連絡ください。
+        </p>
+        
+        <form action="https://formspree.io/f/mzdqgwjj" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required placeholder="example@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" class="btn">メッセージを送信</button>
+          </div>
+        </form>
+
+        <div class="social-links" style="text-align: center; margin-top: 30px;">
+          <a href="https://github.com/engawaaaa">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Futaba Kato. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
