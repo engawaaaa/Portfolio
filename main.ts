@@ -139,25 +139,25 @@ class ResourceManager {
   //すべての画像を読み込む
   static async loadAll(): Promise<void> {
     //プレイヤー画像の読み込み
-    this.playerImage = await this.loadImage('/player.png');
+    this.playerImage = await this.loadImage('./player.png');
     
     //敵画像の読み込み
     for (let i = 1; i <= 5; i++) {
-      this.enemyImages.push(await this.loadImage(`/enemy${i}.png`));
+      this.enemyImages.push(await this.loadImage(`./enemy${i}.png`));
     }
 
     //ボス画像の読み込み
     for (let i = 1; i <= 5; i++) {
-      this.bossImages.push(await this.loadImage(`/boss${i}.png`));
+      this.bossImages.push(await this.loadImage(`./boss${i}.png`));
     }
 
     //弾画像の読み込み
-    this.bulletPImage = await this.loadImage('/bulletP.png');
-    this.bulletEImage = await this.loadImage('/bulletE.png');
+    this.bulletPImage = await this.loadImage('./bulletP.png');
+    this.bulletEImage = await this.loadImage('./bulletE.png');
 
     // 0:Speed, 1:Rapid, 2:Wide, 3:Shield, 4:Life
     for (let i = 1; i <= 5; i++) {
-        this.itemImages.push(await this.loadImage(`/powerup${i}.png`));
+        this.itemImages.push(await this.loadImage(`./powerup${i}.png`));
     }
   }
 
