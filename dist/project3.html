@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotifyAPI - Mashup Ultimate</title>
+  <link rel="stylesheet" href="./style.css">
+  
+  <style>
+    /* --- 既存のスタイル --- */
+    .video-wrapper {
+      max-width: 850px;
+      margin: 0 auto 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background-color: #1a1a1a;
+      border: 1px solid #e5e7eb;
+    }
+
+    .demo-video {
+      width: 100%;
+      display: block;
+    }
+
+    .source-code-box {
+      background-color: #f8fafc;
+      border-left: 4px solid var(--primary-color, #2563eb);
+      padding: 15px 20px;
+      max-width: 850px;
+      margin: 0 auto 40px;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+    }
+
+    /* --- 画像と説明文用の共通スタイル --- */
+    .feature-section {
+      max-width: 850px;
+      margin: 0 auto 30px; /* ブロック間の余白 */
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      color: #1f2937;
+      margin-top: 0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f3f4f6;
+      padding-bottom: 10px;
+    }
+
+    .feature-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feature-image {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      align-self: center; /* スマホ時は中央 */
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-text p {
+      color: #4b5563;
+      line-height: 1.7;
+      margin: 0 0 15px 0;
+    }
+
+    /* --- レスポンシブ設定（600px以上） --- */
+    @media (min-width: 600px) {
+      .feature-content {
+        flex-direction: row; /* 基本は横並び（画像左、テキスト右） */
+        align-items: flex-start;
+      }
+      
+      /* 2つ目のブロック用のクラス：画像とテキストを入れ替える */
+      .feature-content.reverse {
+        flex-direction: row-reverse; /* テキスト左、画像右 */
+      }
+
+      .feature-image {
+        align-self: flex-start; /* PC時は上揃え */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="container header-container">
+        <h1 class="logo"><a href="./index.html" style="color: inherit; text-decoration: none;">Portfolio</a></h1>
+        
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#projects">Projects</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <div class="container">
+    <h2 class="section-title">SpotifyAPI - フェスセトリ予想</h2>
+    
+   <div class="about-section">
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>Swing</li>
+        <li>AWT</li>
+        <li>API</li>
+      </ul>
+    </div>
+
+
+    <p style="text-align: center; margin-bottom: 30px; color: #4b5563;">
+      Spotify / iTunes API と Google News RSS を統合したデスクトップアプリケーションの動作デモです。
+    </p>
+
+    <div class="video-wrapper">
+      <video src="./image/Spotify.mp4" autoplay loop muted playsinline class="demo-video">
+        お使いのブラウザは動画タグをサポートしていません。
+      </video>
+    </div>
+
+    <div class="feature-section">
+      <h3 class="feature-title">特徴 01：独自のセトリ構築アルゴリズム</h3>
+      <div class="feature-content">
+        <img src="./image/Spotify.png" alt="Spotify連携画面" class="feature-image">
+        
+        <div class="feature-text">
+          <p>
+            <strong>Spotify APIから人気曲を解析</strong><br>
+            アーティストの全楽曲から、Spotify APIを用いて「人気度」「リリース日」「シングル/アルバム」等のデータを取得。独自のアルゴリズムにより、フェスの限られた持ち時間内で最も盛り上がるであろうセットリストを自動生成します。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-section">
+      <h3 class="feature-title">特徴 02：iTunes APIによるマルチメディア連携</h3>
+      <div class="feature-content">
+        <img src="./image/listen.png" alt="iTunes試聴画面" class="feature-image">
+
+        <div class="feature-text">
+          <p>
+            <strong>iTunes APIによるマルチメディア連携</strong><br>
+            iTunes APIを用いて、ユーザーが簡単に試聴できる環境を提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-section">
+      <h3 class="feature-title">特徴 03：Google News RSSによる最新情報収集</h3>
+      <div class="feature-content">
+        <img src="./image/news.png" alt="Google News RSS画面" class="feature-image">
+
+        <div class="feature-text">
+          <p>
+            <strong>Google News RSSによる最新情報収集</strong><br>
+            Google NewsのRSSフィードを用いて、関連する最新情報をリアルタイムで収集し、ユーザーに提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <a href="./index.html" class="btn">← ポートフォリオに戻る</a>
+    </div>
+</body>

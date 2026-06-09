@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KakeiboApp</title>
+  <link rel="stylesheet" href="./style.css">
+  
+  <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
+
+  <style>
+    /* 縮小設定を削除し、中央寄せのみを行うシンプルなスタイル */
+    #java-display {
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  </style>
+   <header>
+      <div class="container header-container">
+        <h1 class="logo"><a href="./index.html" style="color: inherit; text-decoration: none;">Portfolio</a></h1>
+        
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#projects">Projects</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+</head>
+<body>
+  <div class="container">
+    <h2 class="section-title">KakeiboApp</h2>
+
+    <div class="about-section">
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>Swing</li>
+        <li>AWT</li>
+      </ul>
+    </div>
+
+    <p style="text-align: center; margin-bottom: 20px;">
+      ブラウザ上でJava Swing/AWTアプリが直接動きます。ロードに数秒かかる場合があります。
+    </p>
+
+    <div id="java-display" style="display: flex; justify-content: center; margin-bottom: 30px;"></div>
+
+    <div style="text-align: center;">
+      <a href="./index.html" class="btn">← ポートフォリオに戻る</a>
+    </div>
+  </div>
+
+  <script>
+    async function runJavaApp() {
+      await cheerpjInit();
+      // 元のサイズ通り 450x800 で生成します
+      cheerpjCreateDisplay(450, 800, document.getElementById("java-display"));
+
+      await cheerpjRunMain("ex12.KakeiboApp", "/app/KakeiboApp.jar");
+    }
+
+    runJavaApp();
+  </script>
+</body>
+</html>
